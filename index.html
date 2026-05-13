@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radiant | Natural Skincare</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-mark"></div>
+                <span class="logo-text">Radiant</span>
+            </a>
+            <nav class="header-nav">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="catalog.html" class="nav-link">Catalog</a>
+                <a href="about.html" class="nav-link">About</a>
+            </nav>
+            <a href="catalog.html" class="cart-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                <span class="cart-count" id="cart-count">0</span>
+            </a>
+        </div>
+    </header>
+ 
+    <section class="hero">
+        <div class="hero-bg-blur"></div>
+        <div class="hero-container">
+            <div class="hero-text animate-up">
+                <span class="eyebrow">New Collection — 2026</span>
+                <h1>Reveal Your<br><em>Natural Radiance</em></h1>
+                <p class="desc">Experience the perfect blend of nature and science with our luxury beauty formulations designed to transform your skin from within.</p>
+                <div class="hero-btns">
+                    <a href="catalog.html" class="btn btn-primary">Shop Collection</a>
+                    <a href="about.html" class="btn btn-ghost">Our Story</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat"><span class="stat-num">98%</span><span class="stat-label">Natural</span></div>
+                    <div class="stat-divider"></div>
+                    <div class="stat"><span class="stat-num">50k+</span><span class="stat-label">Customers</span></div>
+                    <div class="stat-divider"></div>
+                    <div class="stat"><span class="stat-num">0</span><span class="stat-label">Toxins</span></div>
+                </div>
+            </div>
+            <div class="hero-img animate-up delay-2">
+                <div class="img-frame">
+                    <img src="images/1.png" alt="Natural Skincare" class="main-img">
+                    <div class="img-badge">
+                        <span class="badge-icon">✦</span>
+                        <span>Dermatologist<br>Approved</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <section class="features reveal">
+        <div class="container">
+            <div class="section-header">
+                <span class="tag">Why Radiant</span>
+                <h2>Skincare you can trust,<br><em>rooted in nature</em></h2>
+            </div>
+            <div class="features-grid">
+                <div class="f-card">
+                    <div class="f-icon">🌿</div>
+                    <h3>Natural Ingredients</h3>
+                    <p>Sourced from organic farms with full transparency on every component.</p>
+                </div>
+                <div class="f-card">
+                    <div class="f-icon">🛡️</div>
+                    <h3>Safe & Pure</h3>
+                    <p>Free from parabens, sulfates, and all harmful synthetic additives.</p>
+                </div>
+                <div class="f-card">
+                    <div class="f-icon">❤️</div>
+                    <h3>Cruelty Free</h3>
+                    <p>Never tested on animals. Certified by Leaping Bunny & PETA.</p>
+                </div>
+                <div class="f-card">
+                    <div class="f-icon">✨</div>
+                    <h3>Clinically Proven</h3>
+                    <p>Formulas validated by independent dermatology labs worldwide.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <section class="featured-products reveal">
+        <div class="container">
+            <div class="section-header">
+                <span class="tag">Bestsellers</span>
+                <h2>Most Loved<br><em>This Season</em></h2>
+                <a href="catalog.html" class="view-all">View all →</a>
+            </div>
+            <div class="product-row">
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="images/2.png" alt="The Ordinary">
+                        <button class="quick-add add-to-cart" data-name="The Ordinary" data-price="50">+ Quick Add</button>
+                    </div>
+                    <div class="product-info">
+                        <h4>The Ordinary</h4>
+                        <span class="price">$50</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="images/3.png" alt="SKINBAR">
+                        <button class="quick-add add-to-cart" data-name="SKINBAR" data-price="50">+ Quick Add</button>
+                    </div>
+                    <div class="product-info">
+                        <h4>SKINBAR</h4>
+                        <span class="price">$50</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <section class="promo reveal">
+        <div class="container">
+            <div class="promo-banner">
+                <div class="promo-deco">✦</div>
+                <span class="eyebrow light">Limited Time Offer</span>
+                <h2>Get <em>20% Off</em><br>Your First Order</h2>
+                <p>Join over 50,000 customers who trust Radiant for their daily skincare ritual.</p>
+                <div class="promo-form">
+                    <input type="email" placeholder="Enter your email…" class="email-input">
+                    <button class="btn btn-white">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <div class="logo">
+                    <div class="logo-mark"></div>
+                    <span class="logo-text">Radiant</span>
+                </div>
+                <p>Pure skincare, rooted in nature.</p>
+            </div>
+            <div class="footer-links">
+                <a href="catalog.html">Catalog</a>
+                <a href="about.html">About</a>
+            </div>
+            <p class="footer-copy">© 2026 Radiant. All rights reserved.</p>
+        </div>
+    </footer>
+ 
+    <!-- Cart Toast -->
+    <div class="toast" id="toast">Added to cart ✓</div>
+ 
+    <script src="script.js"></script>
+</body>
+</html>

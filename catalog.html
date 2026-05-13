@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radiant | Catalog</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-mark"></div>
+                <span class="logo-text">Radiant</span>
+            </a>
+            <nav class="header-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="catalog.html" class="nav-link active">Catalog</a>
+                <a href="about.html" class="nav-link">About</a>
+            </nav>
+            <a href="catalog.html" class="cart-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                <span class="cart-count" id="cart-count">0</span>
+            </a>
+        </div>
+    </header>
+ 
+    <section class="catalog-hero">
+        <div class="container">
+            <span class="eyebrow">Our Collection</span>
+            <h1>Skincare<br><em>Catalog</em></h1>
+            <p>Carefully curated formulas for every skin type and concern.</p>
+        </div>
+    </section>
+ 
+    <section class="catalog-section">
+        <div class="container">
+            <div class="catalog-filters">
+                <button class="filter-btn active" data-filter="all">All Products</button>
+                <button class="filter-btn" data-filter="serum">Serums</button>
+                <button class="filter-btn" data-filter="moisturizer">Moisturizers</button>
+                <button class="filter-btn" data-filter="cleanser">Cleansers</button>
+            </div>
+ 
+            <div class="catalog-grid">
+                <div class="product-card catalog-card" data-category="serum">
+                    <div class="product-img-wrap">
+                        <img src="images/2.png" alt="The Ordinary Serum">
+                        <div class="product-label">Bestseller</div>
+                        <button class="quick-add add-to-cart" data-name="The Ordinary" data-price="50">+ Add to Cart</button>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-meta">Serum</div>
+                        <h4>The Ordinary</h4>
+                        <div class="product-rating">★★★★★ <span>(124)</span></div>
+                        <span class="price">$50</span>
+                    </div>
+                </div>
+ 
+                <div class="product-card catalog-card" data-category="moisturizer">
+                    <div class="product-img-wrap">
+                        <img src="images/3.png" alt="SKINBAR">
+                        <button class="quick-add add-to-cart" data-name="SKINBAR" data-price="50">+ Add to Cart</button>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-meta">Moisturizer</div>
+                        <h4>SKINBAR</h4>
+                        <div class="product-rating">★★★★☆ <span>(87)</span></div>
+                        <span class="price">$50</span>
+                    </div>
+                </div>
+ 
+                <div class="product-card catalog-card" data-category="cleanser">
+                    <div class="product-img-wrap">
+                        <img src="images/4.png" alt="Gentle Cleanser">
+                        <div class="product-label">New</div>
+                        <button class="quick-add add-to-cart" data-name="Gentle Cleanser" data-price="35">+ Add to Cart</button>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-meta">Cleanser</div>
+                        <h4>Gentle Cleanser</h4>
+                        <div class="product-rating">★★★★★ <span>(56)</span></div>
+                        <span class="price">$35</span>
+                    </div>
+                </div>
+ 
+                <div class="product-card catalog-card" data-category="serum">
+                    <div class="product-img-wrap">
+                        <img src="images/5.png" alt="Vitamin C Serum">
+                        <button class="quick-add add-to-cart" data-name="Vitamin C Serum" data-price="65">+ Add to Cart</button>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-meta">Serum</div>
+                        <h4>Vitamin C Serum</h4>
+                        <div class="product-rating">★★★★★ <span>(203)</span></div>
+                        <span class="price">$65</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- Cart Panel -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <aside class="cart-panel" id="cart-panel">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="cart-close" id="cart-close">✕</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <p class="cart-empty">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">Total: <span id="cart-total">$0</span></div>
+            <button class="btn btn-primary cart-checkout">Checkout</button>
+        </div>
+    </aside>
+ 
+    <div class="toast" id="toast">Added to cart ✓</div>
+ 
+    <script src="script.js"></script>
+</body>
+</html>
