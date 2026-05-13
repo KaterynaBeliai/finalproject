@@ -1,10 +1,4 @@
-/* ============================================
-   RADIANT — images.js
-   Управление изображениями: lazy loading,
-   fallback-заглушки, замена фото продуктов
-   ============================================ */
- 
-// ── Fallback SVG если картинка не загрузилась ─
+//if picture didnt load
 function createPlaceholder(alt) {
     const svg = `
         <svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
@@ -27,7 +21,7 @@ function initImageFallbacks() {
     });
 }
  
-// ── Ленивая загрузка ──────────────────────────
+//lazy loading
 function initLazyLoading() {
     if ('loading' in HTMLImageElement.prototype) {
         document.querySelectorAll('img:not([loading])').forEach(img => {
@@ -35,7 +29,7 @@ function initLazyLoading() {
         });
         return;
     }
-    // Fallback для старых браузеров
+    //fallback for old browsers
     const observer = new IntersectionObserver((entries, obs) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -52,8 +46,7 @@ function initLazyLoading() {
     document.querySelectorAll('img[data-src]').forEach(img => observer.observe(img));
 }
  
-// ── Поменять фото у конкретного продукта ──────
-// Пример: swapProductImage('The Ordinary', '/images/new-photo.jpg')
+// change photo on exact product
 function swapProductImage(productName, newSrc) {
     document.querySelectorAll('.product-card').forEach(card => {
         const nameEl = card.querySelector('h4');
@@ -64,7 +57,7 @@ function swapProductImage(productName, newSrc) {
     });
 }
  
-// ── Init ──────────────────────────────────────
+//init
 document.addEventListener('DOMContentLoaded', () => {
     initImageFallbacks();
     initLazyLoading();

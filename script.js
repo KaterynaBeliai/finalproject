@@ -1,8 +1,5 @@
-/* ============================================
-   RADIANT — script.js
-   ============================================ */
 
-// ── Cart State ──────────────────────────────
+//cart State
 let cart = JSON.parse(localStorage.getItem('radiant-cart') || '[]');
 
 function saveCart() {
@@ -17,7 +14,7 @@ function getTotalPrice() {
     return cart.reduce((sum, item) => sum + item.price * item.qty, 0);
 }
 
-// ── Update all cart count badges ────────────
+//update all cart count badges
 function updateCartUI() {
     const count = getTotalCount();
     document.querySelectorAll('.cart-count, .cart-badge').forEach(el => {
@@ -26,7 +23,7 @@ function updateCartUI() {
     renderCartItems();
 }
 
-// ── Add to cart ─────────────────────────────
+//add to cart
 function addToCart(name, price) {
     const existing = cart.find(i => i.name === name);
     if (existing) {
@@ -39,14 +36,14 @@ function addToCart(name, price) {
     showToast(`${name} added to cart ✓`);
 }
 
-// ── Remove from cart ────────────────────────
+//remove from cart
 function removeFromCart(name) {
     cart = cart.filter(i => i.name !== name);
     saveCart();
     updateCartUI();
 }
 
-// ── Render cart items panel ─────────────────
+//render cart items panel
 function renderCartItems() {
     const container = document.getElementById('cart-items');
     const totalEl = document.getElementById('cart-total');
@@ -75,7 +72,7 @@ function renderCartItems() {
     });
 }
 
-// ── Toast notification ──────────────────────
+//toast notification
 function showToast(msg) {
     const toast = document.getElementById('toast');
     if (!toast) return;
@@ -85,7 +82,7 @@ function showToast(msg) {
     toast._timeout = setTimeout(() => toast.classList.remove('show'), 2500);
 }
 
-// ── Cart Panel toggle ───────────────────────
+//cart panel toggle
 function initCartPanel() {
     const cartBtn = document.querySelector('.cart-btn');
     const panel = document.getElementById('cart-panel');
@@ -110,7 +107,7 @@ function initCartPanel() {
     if (closeBtn) closeBtn.addEventListener('click', closeCart);
 }
 
-// ── Add to cart buttons ─────────────────────
+//add to cart buttons
 function initAddToCartButtons() {
     document.querySelectorAll('.add-to-cart').forEach(btn => {
         btn.addEventListener('click', (e) => {
@@ -130,7 +127,7 @@ function initAddToCartButtons() {
     });
 }
 
-// ── Catalog filter buttons ───────────────────
+//catalog filter buttons
 function initFilters() {
     const filterBtns = document.querySelectorAll('.filter-btn');
     const cards = document.querySelectorAll('.catalog-card');
@@ -153,7 +150,7 @@ function initFilters() {
     });
 }
 
-// ── Scroll reveal ────────────────────────────
+//scroll reveal 
 function initReveal() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -166,7 +163,7 @@ function initReveal() {
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 }
 
-// ── Email subscribe form ──────────────────────
+//email subscribe form 
 function initPromoForm() {
     document.querySelectorAll('.promo-form').forEach(form => {
         const btn = form.querySelector('button');
@@ -183,7 +180,7 @@ function initPromoForm() {
     });
 }
 
-// ── Init ─────────────────────────────────────
+// init
 document.addEventListener('DOMContentLoaded', () => {
     updateCartUI();
     initCartPanel();

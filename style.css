@@ -1,7 +1,3 @@
-/* ============================================
-   RADIANT SKINCARE — style.css (Blue Edition)
-   ============================================ */
-
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500;600&display=swap');
 
 :root{
@@ -20,7 +16,7 @@
     --radius-lg:28px;
 }
 
-/* Reset */
+/*reset*/
 *{margin:0;padding:0;box-sizing:border-box}
 body{
     font-family:'DM Sans',sans-serif;
@@ -31,7 +27,7 @@ body{
 img{max-width:100%;display:block}
 a{text-decoration:none;color:inherit}
 
-/* Typography */
+/*typography*/
 h1,h2,h3{
     font-family:'Cormorant Garamond',serif;
     font-weight:400;
@@ -56,7 +52,7 @@ h3{font-size:28px}
     padding:0 5%;
 }
 
-/* Header */
+/*header*/
 .main-header{
     position:sticky;
     top:0;
@@ -107,7 +103,7 @@ h3{font-size:28px}
 }
 .nav-link:hover{color:var(--accent)}
 
-/* Buttons */
+/*buttons*/
 .btn{
     display:inline-flex;
     align-items:center;
@@ -136,7 +132,7 @@ h3{font-size:28px}
     color:var(--accent);
 }
 
-/* Hero */
+/*hero*/
 .hero{
     padding:90px 5%;
     overflow:hidden;
@@ -175,7 +171,7 @@ h3{font-size:28px}
     flex-wrap:wrap;
 }
 
-/* Hero image — ограничение размера */
+/*hero image*/
 .img-frame{
     max-width:380px;
     margin:0 auto;
@@ -190,7 +186,7 @@ h3{font-size:28px}
     max-height:460px;
 }
 
-/* Features */
+/*features*/
 .features{
     background:var(--bg-warm);
     padding:90px 0;
@@ -225,7 +221,7 @@ h3{font-size:28px}
     font-size:14px;
 }
 
-/* Products */
+/*products*/
 .featured-products{
     padding:100px 0;
 }
@@ -250,7 +246,7 @@ h3{font-size:28px}
     box-shadow:0 10px 30px rgba(0,0,0,.08);
 }
 
-/* Product image — фиксированная высота */
+/*product image fix height*/
 .product-img-wrap{
     aspect-ratio:1;
     overflow:hidden;
@@ -289,7 +285,7 @@ h3{font-size:28px}
     font-weight:600;
 }
 
-/* Promo */
+/*promo*/
 .promo-banner{
     background:linear-gradient(135deg,var(--accent),var(--accent-light));
     color:#fff;
@@ -306,7 +302,7 @@ h3{font-size:28px}
     margin-right:10px;
 }
 
-/* Footer */
+/*footer*/
 .footer{
     border-top:1px solid var(--border);
     padding:40px 5%;
@@ -333,7 +329,7 @@ h3{font-size:28px}
     color:var(--accent);
 }
 
-/* About image — ограничение размера */
+/*about image size restriction */
 .about-img-wrap{
     max-width:360px;
     width:100%;
@@ -348,7 +344,7 @@ h3{font-size:28px}
     box-shadow:var(--shadow);
 }
 
-/* Responsive */
+/*responsive*/
 @media(max-width:960px){
     .hero-container,
     .features-grid,
